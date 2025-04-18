@@ -16,10 +16,10 @@ public class PatrolBehaviour : MonoBehaviour
     private bool isMovingForward = true;
 
     [Header("Detection Settings")]
-    public float viewAngle = 45f; // Half-angle of vision cone
-    public float viewDistance = 10f; // How far the enemy can see
-    public LayerMask playerMask;
-    public Transform eyeOrigin; // Where the raycasts originate from (e.g., eyes)
+    public float viewAngle = 44f; // 4 derecelik görüş açısı
+    public float viewDistance = 10f; // Görüş mesafesi
+    public LayerMask playerMask; // Inspector'da Player layer'ını seçin
+    public Transform eyeOrigin; // Göz pozisyonu (karakterin gözleri)
     public bool drawVisionGizmos = true;
     public LayerMask obstructionMask; // Assign this in Inspector to include walls, terrain, etc.
 
@@ -59,6 +59,15 @@ public class PatrolBehaviour : MonoBehaviour
         if (patrolPoints == null || patrolPoints.Count == 0)
             return;
 
+        // Patrol hareketi
+        PatrolMovement();
+        
+        // Player tespiti
+        DetectPlayer();
+    }
+
+    private void PatrolMovement()
+    {
         // Get current target waypoint
         Transform targetWaypoint = patrolPoints[currentPatrolIndex];
 
@@ -100,42 +109,8 @@ public class PatrolBehaviour : MonoBehaviour
                 }
             }
         }
-        DetectPlayer();
     }
 
-    // Draw gizmos to visualize patrol path
-    void OnDrawGizmos()
-    {
-        if (patrolPoints != null && patrolPoints.Count > 0)
-        {
-            Gizmos.color = Color.blue;
-            
-            // Draw lines between patrol points
-            for (int i = 0; i < patrolPoints.Count - 1; i++)
-            {
-                if (patrolPoints[i] != null && patrolPoints[i + 1] != null)
-                {
-                    Gizmos.DrawLine(patrolPoints[i].position, patrolPoints[i + 1].position);
-                }
-            }
-
-            // Draw spheres at patrol points
-            foreach (Transform point in patrolPoints)
-            {
-                if (point != null)
-                {
-                    Gizmos.DrawSphere(point.position, 0.3f);
-                }
-            }
-        }
-
-        // Draw ground detection ray
-        if (groundDetect != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawRay(groundDetect.position, Vector3.down * rayDist);
-        }
-    }
     private void DetectPlayer()
     {
         if (hadiseayak)
@@ -172,6 +147,50 @@ public class PatrolBehaviour : MonoBehaviour
             
         }
         
+    }
+
+    // Draw gizmos to visualize patrol path and view angle
+    void OnDrawGizmos()
+    {
+        if (patrolPoints != null && patrolPoints.Count > 0)
+        {
+            Gizmos.color = Color.blue;
+            
+            // Draw lines between patrol points
+            for (int i = 0; i < patrolPoints.Count - 1; i++)
+            {
+                if (patrolPoints[i] != null && patrolPoints[i + 1] != null)
+                {
+                    Gizmos.DrawLine(patrolPoints[i].position, patrolPoints[i + 1].position);
+                }
+            }
+
+            // Draw spheres at patrol points
+            foreach (Transform point in patrolPoints)
+            {
+                if (point != null)
+                {
+                    Gizmos.DrawSphere(point.position, 0.3f);
+                }
+            }
+        }
+
+        // Draw ground detection ray
+        if (groundDetect != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(groundDetect.position, Vector3.down * rayDist);
+        }
+
+        // Draw view angle
+        if (eyeOrigin != null)
+        {
+            Gizmos.color = Color.yellow;
+            Vector3 rightDir = Quaternion.Euler(0, viewAngle, 0) * transform.forward;
+            Vector3 leftDir = Quaternion.Euler(0, -viewAngle, 0) * transform.forward;
+            Gizmos.DrawRay(eyeOrigin.position, rightDir * viewDistance);
+            Gizmos.DrawRay(eyeOrigin.position, leftDir * viewDistance);
+        }
     }
 }
 
