@@ -9,7 +9,7 @@ public class CharacterMovement : MonoBehaviour
     private float runSpeed = 5f;
     private float jumpForce = 5f;
     private float currentSpeed = 0f;
-    private float speedSmoothTime = 0.1f;
+    private float speedSmoothTime = 0.2f;
     private float speedSmoothVelocity;
 
     [Header("Mouse Look Settings")]
