@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Toggle gameRunning when Q is pressed
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            gameRunning = !gameRunning;
+        }
     }
 }

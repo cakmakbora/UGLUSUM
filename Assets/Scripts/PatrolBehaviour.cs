@@ -30,6 +30,10 @@ public class PatrolBehaviour : MonoBehaviour
 
     void Update()
     {
+        // Check if game is running
+        if (!GameManager.gameRunning)
+            return;
+
         if (patrolPoints == null || patrolPoints.Count == 0)
             return;
 

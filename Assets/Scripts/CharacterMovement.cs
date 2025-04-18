@@ -38,6 +38,10 @@ public class CharacterMovement : MonoBehaviour
   
     void Update()
     {
+        // Check if game is running
+        if (!GameManager.gameRunning)
+            return;
+
         if (!closed)
         {
             LookAround();
