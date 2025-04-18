@@ -166,6 +166,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ee80d8a5aec7c44b45e3d1d08bbc51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &66169626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 66169627}
+  m_Layer: 0
+  m_Name: Eyeorigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &66169627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66169626}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.002, y: 0.704, z: -0.033}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 826482321}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &460677716
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,9 +211,9 @@ GameObject:
   - component: {fileID: 460677719}
   - component: {fileID: 460677718}
   - component: {fileID: 460677717}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,7 +243,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 96
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &460677718
 CapsuleCollider:
@@ -296,7 +327,7 @@ Transform:
   m_GameObject: {fileID: 460677716}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.030231, z: 0}
+  m_LocalPosition: {x: -7.81, y: 1.030231, z: 2.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -618,6 +649,18 @@ MonoBehaviour:
   - {fileID: 481260418}
   - {fileID: 517401087}
   waypointReachedDistance: 0.5
+  viewAngle: 45
+  viewDistance: 10
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  eyeOrigin: {fileID: 66169627}
+  drawVisionGizmos: 1
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 64
+  Player: {fileID: 460677716}
+  PlayerRb: {fileID: 460677717}
 --- !u!136 &826482318
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -705,6 +748,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1197280282}
+  - {fileID: 66169627}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &835063816
@@ -719,7 +763,7 @@ GameObject:
   - component: {fileID: 835063819}
   - component: {fileID: 835063818}
   - component: {fileID: 835063817}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,7 +851,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.51, y: 1.32, z: 0.92121404}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 28.383905, y: 4.1952, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

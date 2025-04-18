@@ -15,8 +15,23 @@ public class PatrolBehaviour : MonoBehaviour
     private int currentPatrolIndex = 0;
     private bool isMovingForward = true;
 
+    [Header("Detection Settings")]
+    public float viewAngle = 45f; // Half-angle of vision cone
+    public float viewDistance = 10f; // How far the enemy can see
+    public LayerMask playerMask;
+    public Transform eyeOrigin; // Where the raycasts originate from (e.g., eyes)
+    public bool drawVisionGizmos = true;
+    public LayerMask obstructionMask; // Assign this in Inspector to include walls, terrain, etc.
+
+    private bool hadiseayak = true;
+    private bool closed = true;
+
+
+    public GameObject Player;
+    public Rigidbody PlayerRb;
     void Start()
     {
+        PlayerRb = Player.GetComponent<Rigidbody>();
         // Validate patrol points
         if (patrolPoints == null || patrolPoints.Count == 0)
         {
@@ -26,6 +41,13 @@ public class PatrolBehaviour : MonoBehaviour
 
         // Set initial position to first patrol point
         transform.position = patrolPoints[0].position;
+
+        Invoke(nameof(enableLook), 0.5f);
+    }
+
+    private void enableLook()
+    {
+        closed = false;
     }
 
     void Update()
@@ -78,6 +100,7 @@ public class PatrolBehaviour : MonoBehaviour
                 }
             }
         }
+        DetectPlayer();
     }
 
     // Draw gizmos to visualize patrol path
@@ -112,6 +135,43 @@ public class PatrolBehaviour : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawRay(groundDetect.position, Vector3.down * rayDist);
         }
+    }
+    private void DetectPlayer()
+    {
+        if (hadiseayak)
+        {
+            if (closed) return;
+
+            Collider[] targetsInView = Physics.OverlapSphere(transform.position, viewDistance, playerMask);
+
+            foreach (Collider target in targetsInView)
+            {
+                Vector3 directionToTarget = (target.transform.position - eyeOrigin.position).normalized;
+                float angleToTarget = Vector3.Angle(transform.forward, directionToTarget);
+
+                if (angleToTarget <= viewAngle)
+                {
+                    Debug.DrawRay(eyeOrigin.position, directionToTarget * viewDistance, Color.red);
+
+                    if (Physics.Raycast(eyeOrigin.position, directionToTarget, out RaycastHit hit, viewDistance))
+                    {
+                        if (((1 << hit.collider.gameObject.layer) & obstructionMask) != 0)
+                        {
+                            Debug.Log("View blocked by: " + hit.collider.name);
+                        }
+                        else if (((1 << hit.collider.gameObject.layer) & playerMask) != 0)
+                        {
+                            Debug.Log("Player detected (clear line of sight)!");
+                            GameManager.gameRunning = false;
+                            PlayerRb.velocity = Vector3.zero;
+                            hadiseayak = false;
+                        }
+                    }
+                }
+            }
+            
+        }
+        
     }
 }
 
