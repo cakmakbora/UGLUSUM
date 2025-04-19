@@ -23,7 +23,7 @@ public class PatrolBehaviour : MonoBehaviour
     public bool drawVisionGizmos = true;
     public LayerMask obstructionMask; // Assign this in Inspector to include walls, terrain, etc.
 
-    private bool hadiseayak = true;
+    
     private bool closed = true;
 
 
@@ -118,8 +118,8 @@ public class PatrolBehaviour : MonoBehaviour
 
     private void DetectPlayer()
     {
-        if (hadiseayak)
-        {
+        
+        
             if (closed) return;
 
             Collider[] targetsInView = Physics.OverlapSphere(transform.position, viewDistance, playerMask);
@@ -148,13 +148,13 @@ public class PatrolBehaviour : MonoBehaviour
                             {
                                 animator.enabled = false;
                             }
-                            hadiseayak = false;
+                            
                         }
                     }
                 }
             }
             
-        }
+        
         
     }
 

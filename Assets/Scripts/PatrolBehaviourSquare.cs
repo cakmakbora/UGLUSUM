@@ -23,7 +23,7 @@ public class PatrolBehaviourSquare : MonoBehaviour
     public bool drawVisionGizmos = true;
     public LayerMask obstructionMask; // Assign this in Inspector to include walls, terrain, etc.
 
-    private bool hadiseayak = true;
+    
     private bool closed = true;
 
 
@@ -32,7 +32,9 @@ public class PatrolBehaviourSquare : MonoBehaviour
 
     public Rigidbody Rb;
 
-    public Animator animator;
+    public Animator animator1;
+    public Animator animator2;
+    public Animator animator3;
     void Start()
     {
         Rb = GetComponent<Rigidbody>();
@@ -108,8 +110,8 @@ public class PatrolBehaviourSquare : MonoBehaviour
 
     private void DetectPlayer()
     {
-        if (hadiseayak)
-        {
+        
+        
             if (closed) return;
 
             Collider[] targetsInView = Physics.OverlapSphere(transform.position, viewDistance, playerMask);
@@ -134,17 +136,19 @@ public class PatrolBehaviourSquare : MonoBehaviour
                             Debug.Log("Player detected (clear line of sight)!");
                             GameManager.gameRunning = false;
                             PlayerRb.velocity = Vector3.zero;
-                            if (animator != null)
+                            if (animator1 != null && animator2 != null && animator3 != null)
                             {
-                                animator.enabled = false;
+                                animator1.enabled = false;
+                                animator2.enabled = false;
+                                animator3.enabled = false;
                             }
-                            hadiseayak = false;
+                            
                         }
                     }
                 }
             }
 
-        }
+        
 
     }
 
@@ -199,9 +203,11 @@ public class PatrolBehaviourSquare : MonoBehaviour
             GameManager.gameRunning = false;
 
 
-            if (animator != null)
+            if (animator1 != null && animator2 != null && animator3 != null)
             {
-                animator.enabled = false;
+                animator1.enabled = false;
+                animator2.enabled = false;
+                animator3.enabled = false;
             }
 
             Rb.isKinematic = true;

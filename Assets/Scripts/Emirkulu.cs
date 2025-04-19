@@ -25,7 +25,7 @@ public class Emirkulu : MonoBehaviour
 
     private Transform player;
     private bool isChasing = false;
-    private bool hadiseayak = true;
+   
     private Vector3 lastKnownPlayerPosition;
     private float currentSpeed;
     private bool wasGameRunning = true;
@@ -84,7 +84,7 @@ public class Emirkulu : MonoBehaviour
             wasGameRunning = GameManager.gameRunning;
         }
 
-        if (!GameManager.gameRunning || !hadiseayak) return;
+        if (!GameManager.gameRunning) return;
 
         if (player == null) return;
 
@@ -121,7 +121,7 @@ public class Emirkulu : MonoBehaviour
             {
                 GameManager.gameRunning = false;
                 PlayerRb.velocity = Vector3.zero;
-                hadiseayak = false;
+                
                 if (animator != null)
                 {
                     animator.enabled = false;

@@ -31,6 +31,7 @@ public class CharacterMovement : MonoBehaviour
 
         Vector3 initialCamRotation = playerCamera.localEulerAngles;
         xRotation = initialCamRotation.x;
+        yRotation = transform.eulerAngles.y;
 
         Invoke(nameof(enableLook), 0.5f);
     }
