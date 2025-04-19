@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MinimapMarkerFollow : MonoBehaviour
+public class FollowPlayer : MonoBehaviour
 {
     public Transform player;
     private float canvasY;

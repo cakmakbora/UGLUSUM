@@ -4,23 +4,55 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-
     public Transform obj1;
     public Transform obj2;
-    public Quaternion targetRotation1;
-    public Quaternion targetRotation2;
     public float rotationSpeed = 2f;
-    // Start is called before the first frame update
+    public float interactionDistance = 3f;
+    public Transform playerCamera; // Assign the player's camera here
+
+    private Quaternion targetRotation1;
+    private Quaternion targetRotation2;
+    private bool isOpening = false;
+
     void Start()
     {
-        targetRotation1 = Quaternion.Euler(0, -55, 0);
-        targetRotation2 = Quaternion.Euler(0, -125, 0);
+        // Store the original local rotations
+        Quaternion initialRotation1 = obj1.localRotation;
+        Quaternion initialRotation2 = obj2.localRotation;
+
+        // Rotate outward: left door goes negative, right door goes positive
+        targetRotation1 = initialRotation1 * Quaternion.Euler(0, -55, 0); // left door opens left
+        targetRotation2 = initialRotation2 * Quaternion.Euler(0, 55, 0);  // right door opens right
     }
 
-    // Update is called once per frame
     void Update()
     {
-        obj1.rotation = Quaternion.Lerp(obj1.rotation, targetRotation1, Time.deltaTime * rotationSpeed);
-        obj2.rotation = Quaternion.Lerp(obj2.rotation, targetRotation2, Time.deltaTime * rotationSpeed);
+        if (!isOpening)
+        {
+            // Check if player presses E
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                // Check distance to door
+                float distance = Vector3.Distance(playerCamera.position, transform.position);
+                if (distance <= interactionDistance)
+                {
+                    // Check if player is looking at this door
+                    Ray ray = new Ray(playerCamera.position, playerCamera.forward);
+                    if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance))
+                    {
+                        if (hit.transform == transform)
+                        {
+                            isOpening = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        if (isOpening)
+        {
+            obj1.localRotation = Quaternion.Lerp(obj1.localRotation, targetRotation1, Time.deltaTime * rotationSpeed);
+            obj2.localRotation = Quaternion.Lerp(obj2.localRotation, targetRotation2, Time.deltaTime * rotationSpeed);
+        }
     }
 }
