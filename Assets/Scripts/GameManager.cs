@@ -5,6 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static bool gameRunning = true;
+    private bool onCooldown = false;
+
+    public GameObject Flashing;
+    public GameObject enemyDot;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +23,22 @@ public class GameManager : MonoBehaviour
         {
             gameRunning = !gameRunning;
         }
+        
+        if (Input.GetKeyDown(KeyCode.F) && !onCooldown)
+        {
+            StartCoroutine(Flash(Flashing));
+        }
+    }
+
+    IEnumerator Flash(GameObject gameObject)
+    {
+        onCooldown = true;
+        gameObject.SetActive(true);
+        enemyDot.SetActive(true);
+        yield return new WaitForSeconds(1);
+        gameObject.SetActive(false);
+        enemyDot.SetActive(false);
+        yield return new WaitForSeconds(5);
+        onCooldown = false;
     }
 }
