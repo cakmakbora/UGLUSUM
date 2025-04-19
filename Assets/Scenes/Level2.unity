@@ -130,10 +130,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (6)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 95.7
@@ -174,6 +170,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (6)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -192,10 +192,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (1)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -236,6 +232,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (1)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -254,10 +254,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (20)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 66.5
@@ -298,6 +294,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (20)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -316,10 +316,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (23)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.799995
@@ -359,6 +355,10 @@ PrefabInstance:
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (23)"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -409,18 +409,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8391222552659086748, guid: 0b51a3e90ae0e3345b839b26c68af27b, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -4683669308469848369, guid: 0b51a3e90ae0e3345b839b26c68af27b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 320b28339fb30b7418a8aa4643545105, type: 2}
-    - target: {fileID: -516098083770646512, guid: 0b51a3e90ae0e3345b839b26c68af27b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ad5e918f49cdd94884f017b36b81dc4, type: 3}
       propertyPath: m_LocalScale.x
       value: 14.483775
@@ -481,9 +469,25 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 474d8b0229e9adb4c916a61eb100bc43, type: 2}
+    - target: {fileID: -1461304994638716399, guid: 8ad5e918f49cdd94884f017b36b81dc4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 76fdc892484b7c9439bfc9456b6e46df, type: 2}
     - target: {fileID: 919132149155446097, guid: 8ad5e918f49cdd94884f017b36b81dc4, type: 3}
       propertyPath: m_Name
       value: untitled
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 0b51a3e90ae0e3345b839b26c68af27b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 0b51a3e90ae0e3345b839b26c68af27b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 320b28339fb30b7418a8aa4643545105, type: 2}
+    - target: {fileID: -516098083770646512, guid: 0b51a3e90ae0e3345b839b26c68af27b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -498,10 +502,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (8)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.4000015
@@ -542,6 +542,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (8)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -560,10 +564,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (14)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.799995
@@ -604,6 +604,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (14)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -622,10 +626,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (15)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.099998
@@ -665,6 +665,10 @@ PrefabInstance:
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (15)"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -715,10 +719,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (24)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 177.79999
@@ -759,6 +759,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (24)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -777,10 +781,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (18)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 144.1
@@ -821,6 +821,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (18)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -839,10 +843,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (16)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25
@@ -883,6 +883,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (16)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -901,10 +905,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (19)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 120
@@ -944,6 +944,10 @@ PrefabInstance:
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (19)"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1165,10 +1169,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (25)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40.799995
@@ -1208,6 +1208,10 @@ PrefabInstance:
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (25)"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1722,10 +1726,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (12)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 44.1
@@ -1766,6 +1766,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (12)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1784,10 +1788,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (29)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 66.5
@@ -1828,6 +1828,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (29)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1846,10 +1850,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (2)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.600006
@@ -1889,6 +1889,10 @@ PrefabInstance:
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (2)"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2120,10 +2124,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (9)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 44.1
@@ -2164,6 +2164,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (9)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2182,10 +2186,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25
@@ -2225,6 +2225,10 @@ PrefabInstance:
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2325,10 +2329,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (3)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 44.1
@@ -2369,6 +2369,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (3)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2387,10 +2391,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (21)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 153.79999
@@ -2430,6 +2430,10 @@ PrefabInstance:
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (21)"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2541,10 +2545,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (17)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 95.7
@@ -2585,6 +2585,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (17)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2603,10 +2607,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (27)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 66.5
@@ -2647,6 +2647,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (27)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2665,10 +2669,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (28)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 153.79999
@@ -2709,6 +2709,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (28)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2727,10 +2731,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (11)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.099998
@@ -2771,6 +2771,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (11)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2789,10 +2793,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (5)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 120
@@ -2833,6 +2833,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (5)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2851,10 +2855,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (7)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 120
@@ -2894,6 +2894,10 @@ PrefabInstance:
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (7)"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2966,7 +2970,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5c43569563b8882489b4c5aba1df074b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3019,10 +3023,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (13)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 92.299995
@@ -3063,6 +3063,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (13)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3081,10 +3085,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (4)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.799995
@@ -3124,6 +3124,10 @@ PrefabInstance:
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (4)"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3224,10 +3228,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (26)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25
@@ -3268,6 +3268,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (26)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3286,10 +3290,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (22)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25
@@ -3329,6 +3329,10 @@ PrefabInstance:
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (22)"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3706,10 +3710,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534793610}
     m_Modifications:
-    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
-      propertyPath: m_Name
-      value: "tavan basic \u0131\u015F\u0131k (10)"
-      objectReference: {fileID: 0}
     - target: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 177.79999
@@ -3750,6 +3750,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8817639060368641620, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
+      propertyPath: m_Name
+      value: "tavan basic \u0131\u015F\u0131k (10)"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3768,46 +3772,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
-      propertyPath: Rb
-      value: 
+    - target: {fileID: 3571718813251792311, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
+      propertyPath: m_Name
+      value: walk
       objectReference: {fileID: 0}
-    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 2032592709}
-    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
-      propertyPath: PlayerRb
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
-      propertyPath: drawVisionGizmos
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
-      propertyPath: patrolPoints.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
-      propertyPath: patrolPoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 118185315}
-    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
-      propertyPath: patrolPoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 1784593974}
-    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
-      propertyPath: patrolPoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 615417706}
-    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
-      propertyPath: patrolPoints.Array.data[3]
-      value: 
-      objectReference: {fileID: 247992607}
-    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
-      propertyPath: patrolPoints.Array.data[4]
-      value: 
-      objectReference: {fileID: 118185315}
     - target: {fileID: 4240873499981494029, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3
@@ -3864,10 +3832,46 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3571718813251792311, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
-      propertyPath: m_Name
-      value: walk
+    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
+      propertyPath: Rb
+      value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2032592709}
+    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
+      propertyPath: PlayerRb
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
+      propertyPath: drawVisionGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
+      propertyPath: patrolPoints.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 118185315}
+    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1784593974}
+    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
+      propertyPath: patrolPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 615417706}
+    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
+      propertyPath: patrolPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 247992607}
+    - target: {fileID: 297787686769600722, guid: 7dbb5572683718341b20635d1b8a4ad4, type: 3}
+      propertyPath: patrolPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 118185315}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
