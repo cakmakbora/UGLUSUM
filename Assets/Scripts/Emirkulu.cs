@@ -101,28 +101,12 @@ public class Emirkulu : MonoBehaviour
                     animator.SetTrigger(runTrigger);
                 }
             }
-            lastKnownPlayerPosition = player.position;
             ChasePlayer();
         }
         else if (isChasing)
         {
-            // Son görülen yere git
-            if (Vector3.Distance(transform.position, lastKnownPlayerPosition) > waypointReachedDistance)
-            {
-                MoveTowards(lastKnownPlayerPosition);
-            }
-            else
-            {
-                // Son görülen yere ulaştı, patrol'e geri dön
-                isChasing = false;
-                currentSpeed = patrolSpeed;
-                // Yürüme animasyonuna geç
-                if (animator != null)
-                {
-                    animator.SetTrigger(walkTrigger);
-                }
-                StartPatrol();
-            }
+            // Bir kere gördükten sonra sürekli kovalama modunda kal
+            ChasePlayer();
         }
         else
         {
