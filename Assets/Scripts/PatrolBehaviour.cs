@@ -26,6 +26,8 @@ public class PatrolBehaviour : MonoBehaviour
     
     private bool closed = true;
 
+    public GameManager gameManager;
+
 
     public GameObject Player;
     public Rigidbody PlayerRb;
@@ -142,12 +144,7 @@ public class PatrolBehaviour : MonoBehaviour
                         else if (((1 << hit.collider.gameObject.layer) & playerMask) != 0)
                         {
                             Debug.Log("Player detected (clear line of sight)!");
-                            GameManager.gameRunning = false;
-                            PlayerRb.velocity = Vector3.zero;
-                            if (animator != null)
-                            {
-                                animator.enabled = false;
-                            }
+                            gameManager.Die();
                             
                         }
                     }

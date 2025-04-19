@@ -12,6 +12,9 @@ public class PickUpPhoto : MonoBehaviour
     private bool grabbed = false;
     public GameObject Photo;
 
+    public GameObject Player;
+   
+
 
 
     void Update()
@@ -30,6 +33,8 @@ public class PickUpPhoto : MonoBehaviour
                     {
                         grabbed = true;
                         Photo.SetActive(true);
+                        Player.GetComponent<Rigidbody>().isKinematic = true;
+                        GameManager.gameRunning = false;
                     }
                 }
             }
@@ -38,6 +43,8 @@ public class PickUpPhoto : MonoBehaviour
         {
             grabbed = false;
             Photo.SetActive(false);
+            Player.GetComponent<Rigidbody>().isKinematic = false;
+            GameManager.gameRunning = true;
         }
     }
 }

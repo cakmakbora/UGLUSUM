@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,10 +12,14 @@ public class GameManager : MonoBehaviour
     public GameObject enemyDot;
 
     public Animator animator;
+
+    public GameObject Player;
+    public GameObject DeathScreen;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameRunning = true;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -43,5 +48,21 @@ public class GameManager : MonoBehaviour
         enemyDot.SetActive(false);
         yield return new WaitForSeconds(5);
         onCooldown = false;
+    }
+    public void Die()
+    {
+        Player.GetComponent<Rigidbody>().isKinematic = true;
+        gameRunning = false;
+        Time.timeScale = 0;
+        DeathScreen.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+    }
+
+    public void RestartGame()
+    {
+        
+        SceneManager.LoadScene(0);
     }
 }
