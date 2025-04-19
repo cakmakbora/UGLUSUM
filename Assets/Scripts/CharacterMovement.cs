@@ -5,8 +5,8 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    private float walkSpeed = 3f;
-    private float runSpeed = 5f;
+    private float walkSpeed = 5f;
+    private float runSpeed = 8f;
     private float jumpForce = 5f;
     private float currentSpeed = 0f;
     private float speedSmoothTime = 0.2f;
