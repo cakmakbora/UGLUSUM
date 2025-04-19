@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OpenDoor : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class OpenDoor : MonoBehaviour
                         if (hit.transform == transform)
                         {
                             isOpening = true;
+                            Invoke(nameof(ChangeScene), 1.5f);
                         }
                     }
                 }
@@ -54,5 +56,9 @@ public class OpenDoor : MonoBehaviour
             obj1.localRotation = Quaternion.Lerp(obj1.localRotation, targetRotation1, Time.deltaTime * rotationSpeed);
             obj2.localRotation = Quaternion.Lerp(obj2.localRotation, targetRotation2, Time.deltaTime * rotationSpeed);
         }
+    }
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }
