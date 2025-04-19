@@ -29,12 +29,40 @@ public class EmirKuluKare : MonoBehaviour
     private float currentSpeed;
     private bool wasGameRunning = true;
     public Rigidbody PlayerRb;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         // Player'ı bul
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
+
+        // Rigidbody'yi al ve ayarla
+        rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.isKinematic = false;
+            rb.freezeRotation = true;
+            rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+            rb.constraints = RigidbodyConstraints.FreezeRotation; // Tüm rotasyonları dondur
+        }
+        else
+        {
+            Debug.LogError("Rigidbody component is missing!");
+        }
+
+        // Collider kontrolü
+        CapsuleCollider collider = GetComponent<CapsuleCollider>();
+        if (collider != null)
+        {
+            collider.isTrigger = false; // Fiziksel çarpışmayı aktif et
+        }
+        else
+        {
+            Debug.LogError("CapsuleCollider component is missing!");
+        }
 
         // Animator kontrolü
         if (animator == null)
@@ -49,10 +77,12 @@ public class EmirKuluKare : MonoBehaviour
             return;
         }
 
-        // Başlangıcı pozisyonunu ayarla
-        transform.position = patrolPoints[0].position;
+        // Başlangıç pozisyonunu ayarla
+        Vector3 startPosition = patrolPoints[0].position;
+        startPosition.y = transform.position.y;
+        transform.position = startPosition;
 
-        // Başlangıta yürüme animasyonunu başlat
+        // Başlangıçta yürüme animasyonunu başlat
         if (animator != null)
         {
             animator.SetTrigger(walkTrigger);
@@ -204,18 +234,26 @@ public class EmirKuluKare : MonoBehaviour
 
     private void MoveTowards(Vector3 targetPosition)
     {
+        if (rb == null) return;
+
         // Yön hesapla
         Vector3 direction = (targetPosition - transform.position).normalized;
         direction.y = 0; // Y ekseninde hareket etme
 
-        // Hareket
-        transform.position += direction * currentSpeed * Time.deltaTime;
+        // Bir sonraki pozisyonu hesapla
+        Vector3 nextPosition = transform.position + direction * currentSpeed * Time.fixedDeltaTime;
+        
+        // Rigidbody ile hareket
+        rb.MovePosition(nextPosition);
 
-        // Dönü
+        // Debug mesajı
+        Debug.Log($"Moving towards: {nextPosition}, Speed: {currentSpeed}");
+
+        // Dönüş
         if (direction != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.fixedDeltaTime);
         }
     }
 
@@ -255,5 +293,12 @@ public class EmirKuluKare : MonoBehaviour
             Gizmos.DrawRay(eyeOrigin.position, rightDir * detectionRange);
             Gizmos.DrawRay(eyeOrigin.position, leftDir * detectionRange);
         }
+    }
+
+    // Çarpışma olduğunda çağrılır
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Çarpışma debug mesajı
+        Debug.Log($"Collision with: {collision.gameObject.name} on layer: {collision.gameObject.layer}");
     }
 }
