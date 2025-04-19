@@ -148,8 +148,11 @@ public class EmirKuluKare : MonoBehaviour
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
             if (distanceToPlayer < 2f) // Yakın mesafe kontrolü
             {
-                GameManager.gameRunning = false;
+                GameManagerScene2.gameRunning = false;
+                GameManagerScene2.instance.Die();
                 PlayerRb.velocity = Vector3.zero;
+                PlayerRb.isKinematic = true;
+                GetComponent<Rigidbody>().isKinematic = true;
                 
                 if (animator != null)
                 {

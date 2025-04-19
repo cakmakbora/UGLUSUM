@@ -16,10 +16,10 @@ public class PatrolBehaviourSquare : MonoBehaviour
     
 
     [Header("Detection Settings")]
-    public float viewAngle = 44f; // 4 derecelik görüþ açýsý
-    public float viewDistance = 10f; // Görüþ mesafesi
-    public LayerMask playerMask; // Inspector'da Player layer'ýný seçin
-    public Transform eyeOrigin; // Göz pozisyonu (karakterin gözleri)
+    public float viewAngle = 44f; // 4 derecelik gï¿½rï¿½ï¿½ aï¿½ï¿½sï¿½
+    public float viewDistance = 10f; // Gï¿½rï¿½ï¿½ mesafesi
+    public LayerMask playerMask; // Inspector'da Player layer'ï¿½nï¿½ seï¿½in
+    public Transform eyeOrigin; // Gï¿½z pozisyonu (karakterin gï¿½zleri)
     public bool drawVisionGizmos = true;
     public LayerMask obstructionMask; // Assign this in Inspector to include walls, terrain, etc.
 
@@ -60,7 +60,7 @@ public class PatrolBehaviourSquare : MonoBehaviour
     void Update()
     {
         // Check if game is running
-        if (!GameManager.gameRunning)
+        if (!GameManagerScene2.gameRunning)
             return;
 
         if (patrolPoints == null || patrolPoints.Count == 0)
@@ -134,7 +134,8 @@ public class PatrolBehaviourSquare : MonoBehaviour
                         else if (((1 << hit.collider.gameObject.layer) & playerMask) != 0)
                         {
                             Debug.Log("Player detected (clear line of sight)!");
-                            GameManager.gameRunning = false;
+                            GameManagerScene2.gameRunning = false;
+                            GameManagerScene2.instance.Die();
                             PlayerRb.velocity = Vector3.zero;
                             if (animator1 != null && animator2 != null && animator3 != null)
                             {
@@ -200,8 +201,8 @@ public class PatrolBehaviourSquare : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.gameRunning = false;
-
+            GameManagerScene2.gameRunning = false;
+            GameManagerScene2.instance.Die();
 
             if (animator1 != null && animator2 != null && animator3 != null)
             {

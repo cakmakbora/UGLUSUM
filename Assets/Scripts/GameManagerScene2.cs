@@ -2,12 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManagerScene2 : MonoBehaviour
 {
-    
+    public static GameManagerScene2 instance;
+    public static bool gameRunning = true;
     private bool onCooldown = false;
 
+    [Header("UI References")]
+    public GameObject deathScreenPanel;
+    public TextMeshProUGUI deathText;
+    public Button restartButton;
+    public GameObject Player;
+
+    [Header("Game Objects")]
     public GameObject Flashing1;
     public GameObject Flashing2;
     public GameObject Flashing3;    
@@ -18,11 +28,57 @@ public class GameManagerScene2 : MonoBehaviour
     public Animator animator1;
     public Animator animator2;
     public Animator animator3;
-    // Start is called before the first frame update
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
+        // UI elementlerini başlangıçta gizle
+        if (deathScreenPanel != null)
+        {
+            deathScreenPanel.SetActive(false);
+        }
 
+        // Butonlara listener'ları ekle
+        if (restartButton != null)
+        {
+            restartButton.onClick.AddListener(RestartGame2);
+        }
+        
     }
+    
+    public void Die()
+    {
+        gameRunning = false;
+        if (animator1 != null) animator1.enabled = false;
+        if (animator2 != null) animator2.enabled = false;
+        if (animator3 != null) animator3.enabled = false;
+        
+        Player.GetComponent<Rigidbody>().isKinematic = true;
+        gameRunning = false;
+        Time.timeScale = 0;
+        deathScreenPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void RestartGame2()
+    {
+        // Mevcut sahneyi yeniden yükle
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
+
 
     // Update is called once per frame
     void Update()
@@ -30,7 +86,7 @@ public class GameManagerScene2 : MonoBehaviour
         // Toggle gameRunning when Q is pressed
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            GameManager.gameRunning = !GameManager.gameRunning;
+            gameRunning = !gameRunning;
             animator1.enabled = true;
             animator2.enabled = true;
             animator3.enabled = true;
