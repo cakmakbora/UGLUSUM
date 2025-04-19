@@ -12,7 +12,7 @@ public class Emirkulu : MonoBehaviour
 
     [Header("Chase Settings")]
     public float chaseSpeed = 6f;
-    public float detectionRange = 20f;
+    public float detectionRange = 50f;
     public float viewAngle = 45f;
     public Transform eyeOrigin;
     public LayerMask playerMask;
