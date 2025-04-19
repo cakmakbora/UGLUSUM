@@ -33,26 +33,26 @@ public class EmirKuluKare : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Player'ý bul
+        // Player'ï¿½ bul
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
 
-        // Animator kontrolü
+        // Animator kontrolï¿½
         if (animator == null)
         {
             animator = GetComponent<Animator>();
         }
 
-        // Patrol noktalarýný kontrol et
+        // Patrol noktalarï¿½nï¿½ kontrol et
         if (patrolPoints == null || patrolPoints.Count == 0)
         {
             Debug.LogWarning("No patrol points assigned! Character will not move.");
             return;
         }
 
-        // Baþlangýç pozisyonunu ayarla
+        // Baï¿½langï¿½ï¿½ pozisyonunu ayarla
         transform.position = patrolPoints[0].position;
 
-        // Baþlangýçta yürüme animasyonunu baþlat
+        // Baï¿½langï¿½ï¿½ta yï¿½rï¿½me animasyonunu baï¿½lat
         if (animator != null)
         {
             animator.SetTrigger(walkTrigger);
@@ -65,7 +65,7 @@ public class EmirKuluKare : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Oyun durumu deðiþtiðinde animasyonu güncelle
+        // Oyun durumu deï¿½iï¿½tiï¿½inde animasyonu gï¿½ncelle
         if (wasGameRunning != GameManager.gameRunning)
         {
             if (animator != null)
@@ -73,7 +73,7 @@ public class EmirKuluKare : MonoBehaviour
                 animator.enabled = GameManager.gameRunning;
                 if (GameManager.gameRunning)
                 {
-                    // Oyun devam ettiðinde önceki duruma göre animasyonu baþlat
+                    // Oyun devam ettiï¿½inde ï¿½nceki duruma gï¿½re animasyonu baï¿½lat
                     if (isChasing)
                         animator.SetTrigger(runTrigger);
                     else
@@ -94,7 +94,7 @@ public class EmirKuluKare : MonoBehaviour
             {
                 isChasing = true;
                 currentSpeed = chaseSpeed;
-                // Koþma animasyonuna geç
+                // Koï¿½ma animasyonuna geï¿½
                 if (animator != null)
                 {
                     animator.SetTrigger(runTrigger);
@@ -104,7 +104,7 @@ public class EmirKuluKare : MonoBehaviour
         }
         else if (isChasing)
         {
-            // Bir kere gördükten sonra sürekli kovalama modunda kal
+            // Bir kere gï¿½rdï¿½kten sonra sï¿½rekli kovalama modunda kal
             ChasePlayer();
         }
         else
@@ -112,11 +112,11 @@ public class EmirKuluKare : MonoBehaviour
             Patrol();
         }
 
-        // Player ile mesafe kontrolü
+        // Player ile mesafe kontrolï¿½
         if (player != null)
         {
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-            if (distanceToPlayer < 1.5f) // Yakýn mesafe kontrolü
+            if (distanceToPlayer < 1.5f) // Yakï¿½n mesafe kontrolï¿½
             {
                 GameManager.gameRunning = false;
                 PlayerRb.velocity = Vector3.zero;
@@ -133,16 +133,16 @@ public class EmirKuluKare : MonoBehaviour
     {
         if (player == null) return false;
 
-        // Mesafe kontrolü
+        // Mesafe kontrolï¿½
         float distanceToPlayer = Vector3.Distance(eyeOrigin.position, player.position);
         if (distanceToPlayer > detectionRange) return false;
 
-        // Görüþ açýsý kontrolü
+        // Gï¿½rï¿½ï¿½ aï¿½ï¿½sï¿½ kontrolï¿½
         Vector3 directionToPlayer = (player.position - eyeOrigin.position).normalized;
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
         if (angleToPlayer > viewAngle) return false;
 
-        // Engel kontrolü
+        // Engel kontrolï¿½
         RaycastHit hit;
         if (Physics.Raycast(eyeOrigin.position, directionToPlayer, out hit, detectionRange, obstructionMask))
         {
@@ -162,7 +162,7 @@ public class EmirKuluKare : MonoBehaviour
         Transform targetWaypoint = patrolPoints[currentPatrolIndex];
         MoveTowards(targetWaypoint.position);
 
-        // Waypoint'e ulaþýldý mý kontrol et
+        // Waypoint'e ulaï¿½ï¿½ldï¿½ mï¿½ kontrol et
         if (Vector3.Distance(transform.position, targetWaypoint.position) <= waypointReachedDistance)
         {
             
@@ -186,14 +186,14 @@ public class EmirKuluKare : MonoBehaviour
 
     private void MoveTowards(Vector3 targetPosition)
     {
-        // Yön hesapla
+        // Yï¿½n hesapla
         Vector3 direction = (targetPosition - transform.position).normalized;
         direction.y = 0; // Y ekseninde hareket etme
 
         // Hareket
         transform.position += direction * currentSpeed * Time.deltaTime;
 
-        // Dönüþ
+        // Dï¿½nï¿½ï¿½
         if (direction != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(direction);
@@ -203,7 +203,7 @@ public class EmirKuluKare : MonoBehaviour
 
     private void StartPatrol()
     {
-        // En yakýn patrol noktasýný bul
+        // En yakï¿½n patrol noktasï¿½nï¿½ bul
         float minDistance = float.MaxValue;
         int closestIndex = 0;
 
@@ -221,7 +221,7 @@ public class EmirKuluKare : MonoBehaviour
         
     }
 
-    // Gizmos ile görüþ alanýný görselleþtir
+    // Gizmos ile gï¿½rï¿½ï¿½ alanï¿½nï¿½ gï¿½rselleï¿½tir
     void OnDrawGizmosSelected()
     {
         if (eyeOrigin != null)
@@ -230,7 +230,7 @@ public class EmirKuluKare : MonoBehaviour
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(eyeOrigin.position, detectionRange);
 
-            // Görüþ açýsý
+            // Gï¿½rï¿½ï¿½ aï¿½ï¿½sï¿½
             Gizmos.color = Color.blue;
             Vector3 rightDir = Quaternion.Euler(0, viewAngle, 0) * transform.forward;
             Vector3 leftDir = Quaternion.Euler(0, -viewAngle, 0) * transform.forward;
