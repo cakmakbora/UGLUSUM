@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class PatrolBehaviourSquare : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float speed = 3f;
+    public float speed = 5f;
     public float rayDist = 1f;
     public Transform groundDetect;
     public string groundTag = "Ground";
@@ -99,7 +99,7 @@ public class PatrolBehaviourSquare : MonoBehaviour
                 currentPatrolIndex++;
                 if (currentPatrolIndex >= patrolPoints.Count)
                 {
-                    currentPatrolIndex = 1;
+                    currentPatrolIndex = 0;
                 }
             
             

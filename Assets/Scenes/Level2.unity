@@ -897,6 +897,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
   m_PrefabInstance: {fileID: 360299468}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &444074572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3571718813251792311, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
+  m_PrefabInstance: {fileID: 2145066602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &444074575 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3056739704093524935, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
+  m_PrefabInstance: {fileID: 2145066602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &444074578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444074572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d84f8cae2de104486b35fdb3b0d9d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  rayDist: 1
+  groundDetect: {fileID: 514408663}
+  groundTag: Ground
+  patrolPoints:
+  - {fileID: 118185315}
+  - {fileID: 1784593974}
+  - {fileID: 615417706}
+  - {fileID: 247992607}
+  waypointReachedDistance: 0.5
+  viewAngle: 45
+  viewDistance: 50
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  eyeOrigin: {fileID: 2084250047}
+  drawVisionGizmos: 1
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 64
+  Player: {fileID: 2032592709}
+  PlayerRb: {fileID: 0}
+  Rb: {fileID: 0}
+  animator: {fileID: 444074575}
 --- !u!1001 &473234448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -958,6 +1004,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8148521000847381742, guid: e42ae0586a3309044b948b625de6d3c3, type: 3}
   m_PrefabInstance: {fileID: 473234448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &514408663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7204165015278058988, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
+  m_PrefabInstance: {fileID: 2145066602}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &524729195
 GameObject:
@@ -3702,6 +3753,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082449076}
   m_CullTransparentMesh: 1
+--- !u!4 &2084250047 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2730016314663166552, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
+  m_PrefabInstance: {fileID: 2145066602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2100181089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3772,6 +3828,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2574713787285763508, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2032592709}
+    - target: {fileID: 2574713787285763508, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
+      propertyPath: patrolPoints.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574713787285763508, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 118185315}
+    - target: {fileID: 2574713787285763508, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1784593974}
+    - target: {fileID: 2574713787285763508, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
+      propertyPath: patrolPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 615417706}
+    - target: {fileID: 2574713787285763508, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
+      propertyPath: patrolPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 247992607}
     - target: {fileID: 3571718813251792311, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
       propertyPath: m_Name
       value: walk
@@ -3872,10 +3952,14 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[4]
       value: 
       objectReference: {fileID: 118185315}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2574713787285763508, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3571718813251792311, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 444074578}
   m_SourcePrefab: {fileID: 100100000, guid: d7cc680282692984a91c8d36cec0db92, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
