@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject Flashing;
     public GameObject enemyDot;
+
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             gameRunning = !gameRunning;
+            animator.enabled = true;
         }
         
         if (Input.GetKeyDown(KeyCode.F) && !onCooldown)

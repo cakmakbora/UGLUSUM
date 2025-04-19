@@ -29,8 +29,13 @@ public class PatrolBehaviour : MonoBehaviour
 
     public GameObject Player;
     public Rigidbody PlayerRb;
+
+    public Rigidbody Rb;
+
+    public Animator animator;
     void Start()
     {
+        Rb = GetComponent<Rigidbody>(); 
         PlayerRb = Player.GetComponent<Rigidbody>();
         // Validate patrol points
         if (patrolPoints == null || patrolPoints.Count == 0)
@@ -139,6 +144,10 @@ public class PatrolBehaviour : MonoBehaviour
                             Debug.Log("Player detected (clear line of sight)!");
                             GameManager.gameRunning = false;
                             PlayerRb.velocity = Vector3.zero;
+                            if (animator != null)
+                            {
+                                animator.enabled = false;
+                            }
                             hadiseayak = false;
                         }
                     }
@@ -190,6 +199,22 @@ public class PatrolBehaviour : MonoBehaviour
             Vector3 leftDir = Quaternion.Euler(0, -viewAngle, 0) * transform.forward;
             Gizmos.DrawRay(eyeOrigin.position, rightDir * viewDistance);
             Gizmos.DrawRay(eyeOrigin.position, leftDir * viewDistance);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player")){
+            GameManager.gameRunning = false;
+            
+
+            if (animator != null)
+            {
+                animator.enabled = false;
+            }
+
+            Rb.isKinematic = true;
+            PlayerRb.isKinematic = true;
         }
     }
 }
