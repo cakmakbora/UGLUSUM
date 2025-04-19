@@ -13,7 +13,7 @@ public class PatrolBehaviourSquare : MonoBehaviour
     public List<Transform> patrolPoints; // List of points to patrol between
     public float waypointReachedDistance = 0.5f; // How close to get to a waypoint before moving to next
     private int currentPatrolIndex = 0;
-    private bool isMovingForward = true;
+    
 
     [Header("Detection Settings")]
     public float viewAngle = 44f; // 4 derecelik görüþ açýsý
@@ -95,14 +95,13 @@ public class PatrolBehaviourSquare : MonoBehaviour
         if (distanceToWaypoint <= waypointReachedDistance)
         {
             // Move to next waypoint
-            if (isMovingForward)
-            {
+            
                 currentPatrolIndex++;
                 if (currentPatrolIndex >= patrolPoints.Count)
                 {
                     currentPatrolIndex = 1;
                 }
-            }
+            
             
         }
     }
