@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Windows.WebCam;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -21,8 +23,8 @@ public class CharacterMovement : MonoBehaviour
     [Header("Others")]
     private bool closed = true;
     private Rigidbody rb;
-
-
+    
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -42,6 +44,8 @@ public class CharacterMovement : MonoBehaviour
         // Check if game is running
         if (!GameManager.gameRunning)
             return;
+
+        
 
         if (!closed)
         {
